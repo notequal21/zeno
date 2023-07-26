@@ -1,0 +1,128 @@
+.main {
+  position: relative;
+  z-index: 1;
+  padding: 164px 0 100px;
+
+  @media (max-width: 767px) {
+    padding: 130px 0 100px;
+  }
+
+  &__bg {
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+
+    @media (max-width: 767px) {
+      right: 0;
+      top: 0px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      &._light {
+        display: none;
+      }
+
+      &:nth-child(2) {
+        display: none;
+      }
+
+      @media (max-width: 767px) {
+        &:nth-child(1) {
+          display: none;
+        }
+        &:nth-child(2) {
+          display: block;
+        }
+
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+  }
+
+  &-body {
+    @media (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__title {
+      color: #fff;
+      font-family: Plus Jakarta Sans;
+      font-size: 60px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 110%;
+      text-transform: capitalize;
+
+      @media (max-width: 767px) {
+        font-size: 26px;
+        line-height: 130%;
+        text-align: center;
+      }
+
+      span {
+        color: #00d1ff;
+      }
+    }
+
+    &__subtitle {
+      margin: 24px 0 0;
+
+      color: rgba(255, 255, 255, 0.5);
+      font-family: Roboto;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+
+      @media (max-width: 767px) {
+        font-size: 16px;
+        text-align: center;
+
+        br {
+          display: none;
+        }
+      }
+    }
+
+    &__btn {
+      margin: 48px 0 0;
+      padding: 0 66px;
+
+      @media (max-width: 767px) {
+        margin: 48px auto 0;
+        padding: 0 30px;
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+
+    .atropos-main-btn {
+      display: inline-block;
+
+      @media (max-width: 767px) {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .atropos-inner {
+        overflow: visible;
+      }
+
+      // margin: 48px 0 0;
+
+      // @media (max-width: 767px) {
+      //   margin: 48px auto 0;
+      // }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+// -------- imports --------
+@import '../../node_modules/swiper/swiper.scss';
+@import '../../node_modules/swiper/modules/pagination.scss';
+@import '../../node_modules/swiper/modules/navigation.scss';
+@import '../../node_modules/swiper/modules/grid.scss';
+
+@import 'fonts';
+@import 'components/_fonts';
+@import 'components/_normalize.scss';
+@import 'components/_mixins.scss';
+@import 'components/_variables.scss';
+@import 'components/_variables.scss';
+@import 'components/_ui.scss';
+@import 'components/_header.scss';
+@import 'components/_footer.scss';
+@import 'components/_modal.scss';
+@import 'pages/index/_main.scss';
+@import 'pages/index/_sequence.scss';
+@import 'pages/index/_join.scss';
+@import 'pages/index/_partners.scss';
+@import 'pages/index/_stories.scss';
+@import 'pages/index/_popular.scss';
+@import 'pages/index/_about.scss';
+@import 'pages/index/_rewards.scss';
+@import 'pages/index/_faq.scss';
+@import 'pages/index/_teachers.scss';
+
+// light theme
+@import 'components/_light-theme.scss';
+
+@import '../../node_modules/atropos/atropos.scss';
+@import 'components/_aos.scss';
+// @media (max-width: 767px) {
+// }
+
+// fonts --------- &display=swap || &subset=cyrillic-ext
+// throught plugin
+
+::selection {
+}
+
+body {
+  overflow: auto; // <--- delete this if not necessary
+  background: #000;
+  transition: all 0.3s ease;
+  font-family: Roboto;
+
+  @media (max-width: 767px) {
+    background: #0e0c0b;
+  }
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.container {
+  max-width: 1208px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 1 auto;
+}
+
+.bg-con {
+  background: #000;
+  overflow: hidden;
+  @media (max-width: 767px) {
+    background: #0e0c0b;
+  }
+}
+
+._up-btn {
+  cursor: pointer;
+  position: fixed;
+  z-index: 7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  right: 90px;
+  bottom: 90px;
+
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15.5px);
+  transition: all 0.3s ease;
+
+  opacity: 0;
+  transform: scale(0);
+  pointer-events: none;
+
+  &.show {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: unset;
+  }
+
+  @media (max-width: 1540px) {
+    right: 24px;
+    bottom: 40px;
+  }
+  @media (max-width: 767px) {
+    bottom: 24px;
+  }
+
+  svg {
+    path {
+      transition: all 0.3s ease;
+    }
+  }
+
+  &:hover {
+    background: #00d1ff;
+
+    svg {
+      path {
+        fill: #000;
+      }
+    }
+  }
+}

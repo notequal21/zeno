@@ -1,0 +1,20 @@
+import * as functions from './modules/functions.js';
+import * as sliders from './modules/sliders.js';
+
+functions.burger();
+functions.sequenceAnimation();
+functions.faqAccordion();
+functions.modal();
+functions.tabs();
+functions.aboutPlayVideo();
+functions.rewardsHoverPlayAnimation();
+functions.anchors();
+functions.themeSwitcher();
+functions.upBtn();
+functions.atroposAnim();
+functions.mobileFadeUp();
+sliders.partnersSlider();
+sliders.storiesSlider();
+sliders.popularSlider();
+sliders.videoInfoSlider();
+sliders.teachersSlider();
