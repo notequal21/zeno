@@ -1,7 +1,19 @@
 .pin-con {
   position: relative;
-  border-radius: 20px;
+  // border-radius: 20px;
   overflow: hidden;
+
+  &__bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 3;
+
+    background-color: rgba($color: #101010, $alpha: 1);
+    opacity: 0.9;
+  }
 
   // new
   // z-index: 0;

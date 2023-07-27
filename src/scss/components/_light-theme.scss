@@ -884,6 +884,20 @@ body {
           backdrop-filter: blur(20px);
           border: 1px solid rgba($color: #3a3a3a, $alpha: 0.1);
 
+          &.open {
+            .faq-body__item-question {
+              span {
+                background-color: #000000;
+
+                svg {
+                  path {
+                    stroke: #fff;
+                  }
+                }
+              }
+            }
+          }
+
           &-question {
             color: #080d14;
 
@@ -954,6 +968,15 @@ body {
             }
           }
         }
+
+        &__bottom {
+          &-title {
+            color: #767676;
+          }
+        }
+      }
+      &__cr {
+        color: #767676;
       }
     }
 

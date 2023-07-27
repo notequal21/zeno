@@ -253,6 +253,20 @@ export const sequenceAnimation = () => {
       context.drawImage(images[airpods.frame], 0, 0);
     }
 
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: '.pin-con',
+          // trigger: '.sequence',
+          markers: false,
+          start: '-=700',
+          end: isMobile ? '+=700%' : '+=470%',
+          scrub: 0.5,
+        },
+      })
+      .to('.pin-con__bg', { opacity: 0 }, 0)
+      .to('.pin-con__bg', { opacity: 0.9 }, 0.96);
+
     if (isMobile) {
       gsap
         .timeline({
@@ -321,7 +335,7 @@ export const sequenceAnimation = () => {
             pin: true,
             // pin: '.pin-con',
             scrub: 0.5,
-            markers: true,
+            markers: false,
             start: 'top - 100',
             // start: 'top 80%',
             // start: '-=700px',
