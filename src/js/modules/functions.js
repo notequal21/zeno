@@ -218,7 +218,8 @@ export const sequenceAnimation = () => {
   if (document.querySelector('.sequence')) {
     const root = document.querySelector('.sequence');
     const isMobile = window.innerWidth < 767;
-    const canvasRef = root.querySelector('#canvas-sequence');
+    const canvasBlock = document.querySelector('.sequence__canvas');
+    const canvasRef = document.querySelector('#canvas-sequence');
     const progressPagination = root.querySelector(
       '#sequence-pagination-current'
     );
@@ -253,6 +254,27 @@ export const sequenceAnimation = () => {
       context.drawImage(images[airpods.frame], 0, 0);
     }
 
+    let target = document.querySelector('.con-wrapper');
+
+    let options = {
+      root: null,
+      threshold: 0,
+    };
+
+    let callback = function (entries, observer) {
+      if (entries[0].isIntersecting) {
+        canvasBlock.style.display = 'block';
+      } else {
+        canvasBlock.style.display = 'none';
+      }
+      console.log(entries[0].isIntersecting);
+      console.log(observer);
+    };
+
+    let observer = new IntersectionObserver(callback, options);
+
+    observer.observe(target);
+
     gsap
       .timeline({
         scrollTrigger: {
@@ -266,6 +288,28 @@ export const sequenceAnimation = () => {
       })
       .to('.pin-con__bg', { opacity: 0 }, 0)
       .to('.pin-con__bg', { opacity: 0.9 }, 0.96);
+
+    gsap
+      .timeline({
+        onUpdate: render,
+        scrollTrigger: {
+          trigger: '.pin-con',
+          markers: false,
+          start: '-=80%',
+          end: isMobile ? '+=550%' : `+=400%`,
+          scrub: 0.5,
+        },
+      })
+      .to(
+        airpods,
+        {
+          frame: frameCount - 1,
+          snap: 'frame',
+          ease: 'none',
+          duration: 2.9,
+        },
+        0
+      );
 
     if (isMobile) {
       gsap
@@ -294,16 +338,16 @@ export const sequenceAnimation = () => {
             },
           },
         })
-        .to(
-          airpods,
-          {
-            frame: frameCount - 1,
-            snap: 'frame',
-            ease: 'none',
-            duration: 2.9,
-          },
-          0
-        )
+        // .to(
+        //   airpods,
+        //   {
+        //     frame: frameCount - 1,
+        //     snap: 'frame',
+        //     ease: 'none',
+        //     duration: 2.9,
+        //   },
+        //   0
+        // )
         .from(
           '#sequence-item-mobile-1',
           { opacity: 0, y: 100 },
@@ -329,7 +373,7 @@ export const sequenceAnimation = () => {
     } else {
       gsap
         .timeline({
-          onUpdate: render,
+          // onUpdate: render,
           scrollTrigger: {
             trigger: '.sequence',
             pin: true,
@@ -370,16 +414,16 @@ export const sequenceAnimation = () => {
             },
           },
         })
-        .to(
-          airpods,
-          {
-            frame: frameCount - 1,
-            snap: 'frame',
-            ease: 'none',
-            duration: 1.8,
-          },
-          0
-        )
+        // .to(
+        //   airpods,
+        //   {
+        //     frame: frameCount - 1,
+        //     snap: 'frame',
+        //     ease: 'none',
+        //     duration: 1.8,
+        //   },
+        //   0
+        // )
         .from('#sequence-item-1', { opacity: 0, y: 100 }, 0.8)
         .to(
           '.sequence-body__wrapper',

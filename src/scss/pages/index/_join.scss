@@ -3,7 +3,7 @@
   z-index: 1;
   padding: 128px 0;
 
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     padding: 100px 0;
   }
 
@@ -21,7 +21,7 @@
       object-fit: contain;
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
       display: none;
     }
   }
@@ -55,7 +55,7 @@
       mask-composite: exclude;
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
       padding: 24px 16px;
     }
 
@@ -69,7 +69,7 @@
       line-height: 130%;
       text-transform: capitalize;
 
-      @media (max-width: 767px) {
+      @media (max-width: 768px) {
         font-size: 24px;
       }
     }
@@ -88,7 +88,7 @@
         color: #fff;
       }
 
-      @media (max-width: 767px) {
+      @media (max-width: 768px) {
         margin: 16px 0 0;
         font-size: 16px;
 
@@ -103,7 +103,7 @@
       display: flex;
       justify-content: center;
 
-      @media (max-width: 767px) {
+      @media (max-width: 768px) {
         margin: 40px 0 0;
         flex-direction: column;
         align-items: center;
@@ -113,7 +113,7 @@
     &__btn {
       padding: 0 90px;
 
-      @media (max-width: 767px) {
+      @media (max-width: 768px) {
         width: 100%;
         max-width: 320px;
         padding: 0 30px;
@@ -124,7 +124,7 @@
       display: flex;
       margin: 0 60px;
 
-      @media (max-width: 767px) {
+      @media (max-width: 768px) {
         width: 100%;
         max-width: 320px;
         margin: 40px auto 0;
@@ -148,7 +148,7 @@
           background: rgba(255, 255, 255, 0.2);
         }
 
-        @media (max-width: 767px) {
+        @media (max-width: 768px) {
           width: 48px;
           height: 48px;
         }
@@ -160,7 +160,7 @@
 
         &:not(:first-child) {
           margin: 0 0 0 16px;
-          @media (max-width: 767px) {
+          @media (max-width: 768px) {
             margin: 0;
           }
         }
@@ -176,7 +176,7 @@
   }
 
   .atropos-main-btn {
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
       width: 100%;
       margin: 0 auto;
       max-width: 320px;

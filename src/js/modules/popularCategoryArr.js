@@ -21,7 +21,7 @@ export const popularCategoryArr = {
       label: 'New',
       rate: '5.0',
       rateIcon: './img/stories/star-fill.svg',
-      name: 'GREG <br> REID',
+      name: 'Sean <br> Rakidzich',
       pos: 'Mastering AirBnb Business',
     },
     {

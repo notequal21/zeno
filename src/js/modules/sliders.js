@@ -10,7 +10,7 @@ import { popularCategoryArr } from './popularCategoryArr.js';
 
 export const partnersSlider = () => {
   if (document.querySelector('.partners-body')) {
-    const isMobile = window.innerWidth < 767;
+    const isMobile = window.innerWidth < 769;
 
     const partnersSwiper = new Swiper('.partners-body', {
       modules: [Navigation, Pagination, Grid],
@@ -36,7 +36,7 @@ export const partnersSlider = () => {
       },
 
       breakpoints: {
-        767: {
+        769: {
           slidesPerView: 3,
           grid: {
             fill: 'row',

@@ -12,7 +12,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
-    max-width: 700px;
+    max-width: 720px;
 
     @media (max-width: 767px) {
       overflow-x: scroll;
@@ -57,6 +57,8 @@
       font-weight: 500;
       line-height: 140%;
 
+      white-space: nowrap;
+
       transition: all 0.3s ease;
 
       &:hover {
@@ -71,6 +73,9 @@
       }
 
       svg {
+        flex: 0 0 auto;
+        width: 22px;
+        height: 22px;
         margin: 0 10px 0 0;
 
         @media (max-width: 767px) {
@@ -81,6 +86,7 @@
         path {
           stroke: #9a9a9a;
           transition: all 0.3s ease;
+          stroke-opacity: 1;
         }
       }
 
