@@ -256,6 +256,13 @@ body {
             path {
               stroke: #080d14;
             }
+
+            &._lotus-icon {
+              path {
+                fill: #080d14;
+                stroke: unset;
+              }
+            }
           }
 
           &:hover {
@@ -270,6 +277,13 @@ body {
               path {
                 stroke: #fff;
               }
+
+              &._lotus-icon {
+                path {
+                  fill: #fff;
+                  stroke: unset;
+                }
+              }
             }
           }
 
@@ -280,6 +294,13 @@ body {
             svg {
               path {
                 stroke: #fff;
+              }
+
+              &._lotus-icon {
+                path {
+                  fill: #fff;
+                  stroke: unset;
+                }
               }
             }
           }

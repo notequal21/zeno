@@ -199,7 +199,7 @@ export const popularCategoryArr = {
       pos: 'Mastering <br> The Markets',
     },
   ],
-  nft: [
+  web: [
     {
       imgLink: './img/popular/persons/img.jpg',
       label: 'New',
@@ -249,7 +249,7 @@ export const popularCategoryArr = {
       pos: 'Mastering <br> The Markets',
     },
   ],
-  cryptocurrency: [
+  spirituality: [
     {
       imgLink: './img/popular/persons/img.jpg',
       label: 'New',

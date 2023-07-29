@@ -83,6 +83,13 @@
           height: 16px;
         }
 
+        &._lotus-icon {
+          path {
+            stroke: unset;
+            fill: #9a9a9a;
+          }
+        }
+
         path {
           stroke: #9a9a9a;
           transition: all 0.3s ease;

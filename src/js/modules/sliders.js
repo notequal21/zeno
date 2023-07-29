@@ -122,7 +122,7 @@ export const popularSlider = () => {
 
     filterBtns.forEach((item) =>
       item.addEventListener('click', () => {
-        const categoryName = item.innerText.toLowerCase();
+        const categoryName = item.innerText.toLowerCase().split(' ')[0];
         partnersSwiper.removeAllSlides();
         const slidesArr = popularCategoryArr[categoryName].map((item) => {
           return `
